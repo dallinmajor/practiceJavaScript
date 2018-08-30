@@ -29,7 +29,7 @@ const findIndex3 = numbers => {
     return numbers.indexOf(highNum);
 }
 
-// no JS methods, just good old faction for loop and variables
+// no JS methods, just good old factioned for loop and variables
 const findIndex4 = numbers => {
     let highNum = 0;
     let index = 0;
@@ -47,7 +47,3 @@ const findIndex4 = numbers => {
 // Test these functions
 // console.log(findIndex4(numbers));
 // console.log(findIndex4(numbers2));
-
-
-
-
