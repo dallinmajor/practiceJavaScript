@@ -1,21 +1,20 @@
+//Problem
 //function that takes an array of numbers and returns the index of the hightest number
 
-const numbers = [1,5,4,3,8,9,4,3];
-const numbers2 = [1,3,2];
 
-//made easy using ES6 methods .indesOf and Math.max
-const findIndex = arr => {
-    return arr.indexOf(Math.max(...numbers));
+//Solution #1 made easy using ES6 methods .indesOf and Math.max
+const findIndex = numbers => {
+    return numbers.indexOf(Math.max(...numbers));
 };
 
-//using .indexOf and .reduce
+//Solution #2 using .indexOf and .reduce
 const findIndex2 = numbers => {
     return numbers.indexOf(
         numbers.reduce((x, y) => x = x>y?x:y)
     )
 };
 
-//using .indexOf and for loop
+//Solution #3 using .indexOf and for loop
 const findIndex3 = numbers => {
 
     let highNum = 0;
@@ -25,11 +24,10 @@ const findIndex3 = numbers => {
         highNum = highNum > numbers[i] ? highNum : numbers[i];
       
     }
-
     return numbers.indexOf(highNum);
 }
 
-// no JS methods, just good old factioned for loop and variables
+//Solution # 4no JS methods, just good old factioned for loop and variables
 const findIndex4 = numbers => {
     let highNum = 0;
     let index = 0;
@@ -40,10 +38,7 @@ const findIndex4 = numbers => {
             index = i;
         }
     }
-
     return index;
-}
+};
 
-// Test these functions
-// console.log(findIndex4(numbers));
-// console.log(findIndex4(numbers2));
+console.log(findIndex([1,2,3]));
